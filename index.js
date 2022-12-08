@@ -5,15 +5,15 @@ function isPalindrome(word) {
   let reverseWord= neWordarray.reverse();
   let joinedWord= reverseWord.join("");
   if(string === joinedWord) {
-  return ("true");
+  return (true);
   }else if (string!== joinedWord) {
-    return("false");
+    return(false);
   }
 }
-console.log(isPalindrome('wow'));
-console.log(isPalindrome("rotator"));
+console.log(isPalindrome('abba'));
+console.log(isPalindrome("a"));
 console.log(isPalindrome("racecar"));
-console.log(isPalindrome("catch"));
+console.log(isPalindrome("ab"));
 console.log(isPalindrome("robot"));
 
 /* 
@@ -46,18 +46,27 @@ console.log(isPalindrome("robot"));
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true")
-  console.log("=>", isPalindrome("wow"))
+  console.log("=>", isPalindrome("abba"))
+
+  console.log("")
   console.log("Expecting: true")
-  console.log("=>", isPalindrome("rotator"))
+  console.log("=>", isPalindrome("a"))
+
+  console.log("")
+
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
   console.log("");
 
   console.log("Expecting : false")
-  console.log("=>>", isPalindrome("catch"))
+  console.log("=>>", isPalindrome("ab"))
+
+  console.log("")
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("")
 }
 
 module.exports = isPalindrome;
